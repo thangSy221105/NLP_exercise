@@ -1,26 +1,28 @@
-# Part C — Prediction Before Experiment
+# 6. Part C — Prediction Before Experiment
 
-Ghi prediction trước khi mở corpus và chạy experiment.
+Trước khi mở corpus 30K documents, ghi ít nhất ba prediction.
 
 ## Prediction 1 — Vocabulary
 
-Vocabulary có khoảng bao nhiêu unique terms? Vì sao?
+Nếu corpus có 30K documents, vocabulary sẽ có khoảng bao nhiêu unique terms?
 
-TODO
+### Student prediction
+
+> TODO: Viết prediction và lý do.
 
 ## Prediction 2 — Sparsity
 
 TF-IDF matrix sẽ dense hay sparse? Tỷ lệ zero entries có thể lớn đến mức nào?
 
-TODO
+### Student prediction
+
+> TODO: Viết prediction và lý do.
 
 ## Prediction 3 — Search
 
-Documents đứng đầu kết quả có nhất thiết là documents gần nghĩa nhất không?
+Với một query bất kỳ, các documents đứng đầu kết quả tìm kiếm có nhất thiết là documents gần nghĩa nhất không?
 
-TODO
+### Student prediction
 
-## Đối chiếu sau experiment
-
-TODO
+> TODO: Viết prediction và lý do.
 
