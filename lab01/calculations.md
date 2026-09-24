@@ -90,3 +90,5 @@ Không dùng code, hãy dự đoán:
 
 > TODO: Viết prediction trước khi chạy experiment.
 
+![Bài làm Calculation](data/calcualtion.jpg)
+

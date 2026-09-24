@@ -1,2 +1,22 @@
 query,rank,document_id,similarity,relevant
+medical image classification,1,18971,0.3162,True
+medical image classification,2,8527,0.2935,True
+medical image classification,3,243,0.2675,True
+medical image classification,4,28983,0.2658,False
+medical image classification,5,15873,0.2615,False
+transformer language model,1,25428,0.3843,True
+transformer language model,2,24482,0.3656,True
+transformer language model,3,13690,0.3629,True
+transformer language model,4,4075,0.3567,False
+transformer language model,5,582,0.3314,False
+deep learning healthcare,1,9252,0.4207,True
+deep learning healthcare,2,9229,0.4114,True
+deep learning healthcare,3,8614,0.3791,True
+deep learning healthcare,4,6123,0.3536,False
+deep learning healthcare,5,16272,0.3436,False
+natural language processing,1,25428,0.3804,True
+natural language processing,2,13690,0.3771,True
+natural language processing,3,24482,0.3522,True
+natural language processing,4,4075,0.3488,False
+natural language processing,5,24136,0.3442,False
 
