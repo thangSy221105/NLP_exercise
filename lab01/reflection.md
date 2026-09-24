@@ -1,6 +1,5 @@
 # 16. Reflection
 
-Tối đa khoảng 500 từ. Trả lời sáu câu hỏi sau.
 
 1. Prediction nào của em sai?
 
@@ -36,5 +35,5 @@ Tối đa khoảng 500 từ. Trả lời sáu câu hỏi sau.
 
 ### Student answer
 
-> Em dùng AI để giải thích công thức, hỗ trợ kiểm tra notebook và lưu kết quả vào CSV, đồng thời gợi ý cách phân tích các truy vấn. Em vẫn cần đối chiếu kết quả với văn bản gốc; việc kiểm tra cho thấy một số nhãn relevant ban đầu chưa chính xác.
+> Em dùng AI để giải thích công thức, code, hỗ trợ kiểm tra notebook và lưu kết quả vào CSV, đồng thời gợi ý cách phân tích các truy vấn. Em vẫn cần đối chiếu kết quả với văn bản gốc; việc kiểm tra cho thấy một số nhãn relevant ban đầu chưa chính xác.
 
