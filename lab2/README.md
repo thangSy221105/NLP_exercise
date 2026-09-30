@@ -7,8 +7,8 @@ Thư mục này chứa Lab 2 chạy trên 10.000 documents đầu tiên của co
 - experiments.ipynb: các mục 13–23 theo W2, bảng kết quả, biểu đồ inline và thảo luận tiếng Việt.
 - ngram_lm.py: tự cài đặt đếm n-gram, MLE, Laplace, xác suất câu, log probability, perplexity và dự đoán từ.
 - results.csv: 50 dòng kết quả perplexity, prediction, sentence ranking, error analysis và n-gram coverage.
-- calculations.md, prediction.md, reflection.md: các phần người học tự hoàn thiện.
-- error_analysis.md: bốn ví dụ đúng/sai rút từ lần chạy 10k.
+- calculations.pdf, prediction.pdf, refliction.pdf: bài tính tay, dự đoán và reflection.
+- error_analysis.pdf: phân tích bốn ví dụ đúng/sai rút từ lần chạy 10k.
 
 ## Chạy notebook
 
