@@ -1,1 +1,51 @@
 record_type,experiment,model,n,smoothing,split,context,candidate,rank,prediction,actual_next_word,probability,perplexity,notes
+perplexity,Experiment 2,Bigram,2,mle,train,,,,,,,133.76669341161096,
+perplexity,Experiment 2,Bigram,2,mle,validation,,,,,,,inf,
+perplexity,Experiment 2,Bigram,2,mle,test,,,,,,,inf,
+perplexity,Experiment 2,Bigram,2,laplace,train,,,,,,,5933.069105655561,
+perplexity,Experiment 2,Bigram,2,laplace,validation,,,,,,,8553.356804674104,
+perplexity,Experiment 2,Bigram,2,laplace,test,,,,,,,8688.74039590672,
+perplexity,Experiment 2,Trigram,3,mle,train,,,,,,,10.436496826202443,
+perplexity,Experiment 2,Trigram,3,mle,validation,,,,,,,inf,
+perplexity,Experiment 2,Trigram,3,mle,test,,,,,,,inf,
+perplexity,Experiment 2,Trigram,3,laplace,train,,,,,,,20681.192760936392,
+perplexity,Experiment 2,Trigram,3,laplace,validation,,,,,,,36847.87948332234,
+perplexity,Experiment 2,Trigram,3,laplace,test,,,,,,,37053.109025036625,
+perplexity,Experiment 3,Unigram,1,mle,train,,,,,,,2007.7644667154468,
+perplexity,Experiment 3,Unigram,1,mle,validation,,,,,,,inf,
+perplexity,Experiment 3,Unigram,1,mle,test,,,,,,,inf,
+perplexity,Experiment 3,Bigram,2,mle,train,,,,,,,133.76669341161096,
+perplexity,Experiment 3,Bigram,2,mle,validation,,,,,,,inf,
+perplexity,Experiment 3,Bigram,2,mle,test,,,,,,,inf,
+perplexity,Experiment 3,Trigram,3,mle,train,,,,,,,10.436496826202443,
+perplexity,Experiment 3,Trigram,3,mle,validation,,,,,,,inf,
+perplexity,Experiment 3,Trigram,3,mle,test,,,,,,,inf,
+next_word,Application 1,Trigram MLE,3,mle,test,the cat,house,1,house,queen,0.14285714285714285,,
+next_word,Application 1,Trigram MLE,3,mle,test,the cat,and,2,house,queen,0.07142857142857142,,
+next_word,Application 1,Trigram MLE,3,mle,test,the cat,at,3,house,queen,0.07142857142857142,,
+next_word,Application 1,Trigram MLE,3,mle,test,natural language,1980,1,1980,Unknown,1.0,,
+next_word,Application 1,Trigram MLE,3,mle,test,machine learning,and,1,and,has,0.19230769230769232,,
+next_word,Application 1,Trigram MLE,3,mle,test,machine learning,based,2,and,has,0.19230769230769232,,
+next_word,Application 1,Trigram MLE,3,mle,test,machine learning,approaches,3,and,has,0.15384615384615385,,
+next_word,Application 1,Trigram MLE,3,mle,test,deep learning,and,1,and,Unknown,0.5,,
+next_word,Application 1,Trigram MLE,3,mle,test,deep learning,for,2,and,Unknown,0.25,,
+next_word,Application 1,Trigram MLE,3,mle,test,deep learning,technologies,3,and,Unknown,0.25,,
+next_word,Application 1,Trigram MLE,3,mle,test,computer vision,based,1,based,Unknown,0.3333333333333333,,
+next_word,Application 1,Trigram MLE,3,mle,test,computer vision,iccv,2,based,Unknown,0.3333333333333333,,
+next_word,Application 1,Trigram MLE,3,mle,test,computer vision,soft,3,based,Unknown,0.3333333333333333,,
+sentence_ranking,Application 2,Trigram MLE,3,mle,train,machine learning,models,1,,,,,log_probability=-1.8718021769015913
+sentence_ranking,Application 2,Trigram MLE,3,mle,train,machine learning,and sandboxing to,2,,,,,log_probability=-5.232177564043491
+sentence_ranking,Application 2,Trigram MLE,3,mle,train,machine learning,technology and is,3,,,,,log_probability=-7.8532163881560715
+error_case,Error analysis,Trigram,3,mle,test,alliance is,a,,a,a,0.5,,Đúng
+error_case,Error analysis,Trigram,3,mle,test,nonprofit organization,dedicated,,dedicated,dedicated,0.16666666666666666,,Đúng
+error_case,Error analysis,Trigram,3,mle,test,the downtown,area,,area,alliance,0.5,,Sai
+error_case,Error analysis,Trigram,3,mle,test,is a,great,,great,501c6,0.03568464730290456,,Sai
+ngram_coverage,Experiment 23,Unigram,1,mle,train,,,,,,0.0,,unseen=0; total=2524517
+ngram_coverage,Experiment 23,Unigram,1,mle,validation,,,,,,0.02924206614105039,,unseen=16208; total=554270
+ngram_coverage,Experiment 23,Unigram,1,mle,test,,,,,,0.028595238866629947,,unseen=15887; total=555582
+ngram_coverage,Experiment 23,Bigram,2,mle,train,,,,,,0.0,,unseen=0; total=2379366
+ngram_coverage,Experiment 23,Bigram,2,mle,validation,,,,,,0.33466726575719624,,unseen=175036; total=523015
+ngram_coverage,Experiment 23,Bigram,2,mle,test,,,,,,0.33368445558875953,,unseen=174862; total=524034
+ngram_coverage,Experiment 23,Trigram,3,mle,train,,,,,,0.0,,unseen=0; total=2237193
+ngram_coverage,Experiment 23,Trigram,3,mle,validation,,,,,,0.7411516154916559,,unseen=364843; total=492265
+ngram_coverage,Experiment 23,Trigram,3,mle,test,,,,,,0.7404890119362723,,unseen=365087; total=493035

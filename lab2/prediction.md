@@ -1,4 +1,4 @@
-# Predictions trước experiment
+# 12. Predictions trước experiment
 
 > Hoàn thành trước khi chạy code hoặc xem kết quả. Với mỗi câu, ghi prediction, reason và confidence. Sau experiment, mới ghi lại điều chỉnh của bạn.
 

@@ -1,8 +1,10 @@
-# Bài tính tay
+# Bài tính tay — mục 7, 9, 11 và 18
+
+## 7. Bài tập tính toán
 
 > Hoàn thành phần này trước khi chạy code. Tự trình bày các bước tính và kết quả.
 
-## Bài 1 — Unigram
+### 7.1 — Bài 1: Unigram
 
 Corpus:
 
@@ -21,7 +23,7 @@ the dog eats meat
 4. Kiểm tra tổng xác suất:
    - [Tự điền]
 
-## Bài 2 — Bigram
+### 7.2 — Bài 2: Bigram
 
 Dùng corpus ở Bài 1.
 
@@ -32,7 +34,7 @@ Dùng corpus ở Bài 1.
 - Vì sao tổng xác suất các từ đứng sau `the` bằng 1 khi vocabulary/context được xử lý đầy đủ?
   - [Tự giải thích]
 
-## Bài 3 — Xác suất câu
+### 7.3 — Bài 3: Xác suất câu
 
 Câu: `the cat eats fish`
 
@@ -42,14 +44,14 @@ Theo bigram: P(the) P(cat | the) P(eats | cat) P(fish | eats).
 - Nếu thêm một từ vào câu, xác suất cả câu có thể tăng không? Giải thích:
   - [Tự giải thích]
 
-## Bài 4 — Sentence ranking
+### 7.4 — Bài 4: Sentence ranking
 
 - S1: `the cat eats fish`
 - S2: `the dog eats fish`
 - Dự đoán câu có xác suất cao hơn trước khi chạy code: [Tự điền]
 - Lý do: [Tự giải thích]
 
-## Bài suy luận trước smoothing
+## 9. Bài tập suy luận trước smoothing
 
 Corpus:
 
@@ -66,7 +68,7 @@ Xét P(AI | study):
 3. Ảnh hưởng lên xác suất câu có bigram này: [Tự điền]
 4. Việc không quan sát thấy bigram có nghĩa câu không thể xảy ra không? [Tự giải thích]
 
-## Bài 5 — Laplace smoothing
+## 11. Bài tập tính smoothing
 
 Cho C(cat) = 10, V = 5.
 
@@ -74,7 +76,7 @@ Cho C(cat) = 10, V = 5.
 2. Trường hợp C(cat, eats) = 3: [Tự tính P_Laplace(eats | cat)]
 3. Các bigram khác bị thay đổi xác suất thế nào? [Tự giải thích]
 
-## Bài 6 — Perplexity
+## 18. Bài tập tính Perplexity
 
 Cho P(w1) = 0.5, P(w2 | w1) = 0.25, P(w3 | w2) = 0.5.
 

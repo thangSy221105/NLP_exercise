@@ -1,69 +1,187 @@
-"""Starter scaffold for LAB 02 n-gram language models.
+"""From-scratch unigram, bigram and trigram language models."""
 
-Input convention for this scaffold: a corpus is a sequence of tokenized
-sentences. Adapt the data loader/preprocessing to the course corpus and record
-your choices in README.md. Implement the TODOs yourself.
-"""
-
-from __future__ import annotations
-
+import math
+import re
 from collections import Counter
-from typing import Sequence
+from heapq import nlargest
 
-Token = str
-Sentence = Sequence[Token]
-Corpus = Sequence[Sentence]
-Ngram = tuple[Token, ...]
-
-
-def build_vocabulary(corpus: Corpus) -> list[Token]:
-    """Build and return the model vocabulary from a tokenized corpus."""
-    raise NotImplementedError("TODO: implement vocabulary construction")
+UNK = "<unk>"
+SENTENCE_RE = re.compile(r"(?<=[.!?])\s+|\n+")
+WORD_RE = re.compile(r"[a-z0-9]+(?:['’][a-z0-9]+)*")
 
 
-def count_ngrams(tokens: Sequence[Token], n: int) -> Counter[Ngram]:
-    """Count contiguous n-grams in a token sequence."""
-    raise NotImplementedError("TODO: implement n-gram counting")
+def tokenize_sentence(text):
+    return WORD_RE.findall(text.lower())
 
 
-def train_unigram(corpus: Corpus) -> Counter[Ngram]:
-    """Return unigram counts for the corpus."""
-    raise NotImplementedError("TODO: implement unigram counting")
+def document_to_sentences(text):
+    return [tokens for part in SENTENCE_RE.split(text.lower().replace("\r", "\n"))
+            if (tokens := tokenize_sentence(part))]
 
 
-def train_bigram(corpus: Corpus) -> Counter[Ngram]:
-    """Return bigram counts for the corpus."""
-    raise NotImplementedError("TODO: implement bigram counting")
+def tokens_of(sentence):
+    if isinstance(sentence, str):
+        return tokenize_sentence(sentence)
+    return [str(word).lower() for word in sentence]
 
 
-def train_trigram(corpus: Corpus) -> Counter[Ngram]:
-    """Return trigram counts for the corpus."""
-    raise NotImplementedError("TODO: implement trigram counting")
+def build_vocabulary(corpus, min_count=1, include_special_tokens=True):
+    counts = Counter(word for sentence in corpus for word in tokens_of(sentence))
+    words = {word for word, count in counts.items() if count >= min_count and word != UNK}
+    if include_special_tokens:
+        words.add(UNK)
+    return sorted(words)
 
+
+def count_ngrams(tokens, n):
+    words = tokens_of(tokens)
+    return Counter(tuple(words[i:i + n]) for i in range(len(words) - n + 1))
+
+
+def train_ngrams(corpus, n):
+    counts = Counter()
+    for sentence in corpus:
+        words = tokens_of(sentence)
+        for i in range(len(words) - n + 1):
+            counts[tuple(words[i:i + n])] += 1
+    return counts
+
+
+def train_unigram(corpus):
+    return train_ngrams(corpus, 1)
+
+
+def train_bigram(corpus):
+    return train_ngrams(corpus, 2)
+
+
+def train_trigram(corpus):
+    return train_ngrams(corpus, 3)
 
 class NGramLanguageModel:
-    """Starter API for unigram, bigram, and trigram language models."""
+    def __init__(self, n, smoothing="mle", alpha=1.0, min_count=1):
+        if n not in (1, 2, 3):
+            raise ValueError("n must be 1, 2 or 3")
+        self.n = n
+        self.smoothing = smoothing.lower()
+        self.alpha = alpha
+        self.min_count = min_count
 
-    def __init__(self, n: int, smoothing: str = "mle") -> None:
-        """Store model order and smoothing choice; validate supported values."""
-        raise NotImplementedError("TODO: implement model initialization")
+    def _encode(self, ids):
+        key = 0
+        for token_id in ids:
+            key = key * self.base + token_id
+        return key
 
-    def fit(self, corpus: Corpus) -> NGramLanguageModel:
-        """Build vocabulary and counts from the training corpus."""
-        raise NotImplementedError("TODO: implement model fitting")
+    def fit(self, corpus):
+        sentences = [tokens_of(sentence) for sentence in corpus]
+        self.vocabulary = build_vocabulary(sentences, self.min_count)
+        self.word_id = {word: i for i, word in enumerate(self.vocabulary)}
+        self.unk_id = self.word_id[UNK]
+        self.base = len(self.vocabulary)
+        self.unigram_counts = Counter()
+        self.bigram_counts = Counter()
+        self.trigram_counts = Counter()
+        self.bigram_context_counts = Counter()
+        self.trigram_context_counts = Counter()
+        self.total_tokens = 0
 
-    def probability(self, context: Sequence[Token], word: Token) -> float:
-        """Return P(word | context) under the selected model/smoothing."""
-        raise NotImplementedError("TODO: implement conditional probability")
+        for sentence in sentences:
+            ids = [self.word_id.get(word, self.unk_id) for word in sentence]
+            self.unigram_counts.update(ids)
+            self.total_tokens += len(ids)
+            if self.n >= 2:
+                for i in range(len(ids) - 1):
+                    self.bigram_counts[self._encode(ids[i:i + 2])] += 1
+                    self.bigram_context_counts[ids[i]] += 1
+            if self.n >= 3:
+                for i in range(len(ids) - 2):
+                    self.trigram_counts[self._encode(ids[i:i + 3])] += 1
+                    self.trigram_context_counts[self._encode(ids[i:i + 2])] += 1
 
-    def sentence_probability(self, sentence: Sentence) -> float:
-        """Return the probability assigned to a sentence."""
-        raise NotImplementedError("TODO: implement sentence probability")
+        self.ngram_counts = {
+            1: self.unigram_counts,
+            2: self.bigram_counts,
+            3: self.trigram_counts,
+        }[self.n]
+        return self
 
-    def sentence_log_probability(self, sentence: Sentence) -> float:
-        """Return log probability to avoid multiplying tiny values directly."""
-        raise NotImplementedError("TODO: implement sentence log probability")
+    def _context_ids(self, context):
+        words = tokens_of(context)
+        ids = [self.word_id.get(word, self.unk_id) for word in words]
+        return ids[-(self.n - 1):] if self.n > 1 else []
 
-    def next_word_distribution(self, context: Sequence[Token]) -> dict[Token, float]:
-        """Return candidate next words and their probabilities."""
-        raise NotImplementedError("TODO: implement next-word distribution")
+    def probability(self, context, word, smoothing=None):
+        mode = (smoothing or self.smoothing).lower()
+        context = self._context_ids(context)
+        word_id = self.word_id.get(str(word).lower(), self.unk_id)
+        vocabulary_size = len(self.vocabulary)
+
+        if self.n == 1 or not context:
+            count = self.unigram_counts[word_id]
+            denominator = self.total_tokens
+        elif self.n == 2 or len(context) == 1:
+            previous = context[-1]
+            count = self.bigram_counts[self._encode([previous, word_id])]
+            denominator = (self.unigram_counts[previous] if mode == "laplace"
+                           else self.bigram_context_counts[previous])
+        else:
+            history = context[-2:]
+            count = self.trigram_counts[self._encode(history + [word_id])]
+            denominator = self.trigram_context_counts[self._encode(history)]
+
+        if mode == "mle":
+            return count / denominator if denominator else 0.0
+        if mode == "laplace":
+            return (count + self.alpha) / (denominator + self.alpha * vocabulary_size)
+        raise ValueError("smoothing must be 'mle' or 'laplace'")
+
+    def sentence_log_probability(self, sentence, smoothing=None):
+        words = tokens_of(sentence)
+        score = 0.0
+        for i, word in enumerate(words):
+            probability = self.probability(words[max(0, i - self.n + 1):i], word, smoothing)
+            if probability == 0:
+                return -math.inf
+            score += math.log(probability)
+        return score
+
+    def sentence_probability(self, sentence, smoothing=None):
+        score = self.sentence_log_probability(sentence, smoothing)
+        return 0.0 if score == -math.inf else math.exp(score)
+
+    def perplexity(self, corpus, smoothing=None):
+        total_log, total_tokens = 0.0, 0
+        for sentence in corpus:
+            words = tokens_of(sentence)
+            score = self.sentence_log_probability(words, smoothing)
+            if score == -math.inf:
+                return math.inf
+            total_log += score
+            total_tokens += len(words)
+        return math.exp(-total_log / total_tokens) if total_tokens else math.nan
+
+    def next_word_distribution(self, context, smoothing=None):
+        words = ((word, self.probability(context, word, smoothing))
+                 for word in self.vocabulary)
+        return dict(sorted(((word, p) for word, p in words if p > 0),
+                           key=lambda item: (-item[1], item[0])))
+
+    def count_summary(self, top_k=5000):
+        counts = self.ngram_counts.values()
+        return {
+            "unique_ngrams": len(self.ngram_counts),
+            "singletons": sum(count == 1 for count in counts),
+            "top_frequencies": nlargest(top_k, self.ngram_counts.values()),
+        }
+
+    def ngram_coverage(self, corpus):
+        total = unseen = 0
+        for sentence in corpus:
+            ids = [self.word_id.get(word, self.unk_id) for word in tokens_of(sentence)]
+            for i in range(len(ids) - self.n + 1):
+                total += 1
+                if self._encode(ids[i:i + self.n]) not in self.ngram_counts:
+                    unseen += 1
+        return {"total_ngrams": total, "unseen_ngrams": unseen,
+                "unseen_rate": unseen / total if total else 0.0}
