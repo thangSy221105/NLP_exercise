@@ -1,0 +1,207 @@
+record_type,experiment,model,objective,documents,window,vector_size,min_count,epochs,word,other_word,query,candidate,rank,score,training_seconds,model_bytes,notes,vocabulary_size
+cooccurrence_stats,10,Raw co-occurrence,,10000,1,,,,,,,,,962245,4.686923399800435,,"{""Window"": 1, ""Vocabulary"": 5003, ""Rows"": 5003, ""Columns"": 5003, ""Non-zero"": 962245, ""Density (%)"": 3.8443653775753734, ""Total counts"": 5077022, ""Build seconds"": 4.686923399800435, ""CSR MiB"": 11.031108856201172}",5003
+similarity,10,Raw co-occurrence,,10000,1,,,,doctor,physician,,,,0.8301363515486211,,,,5003
+similarity,10,Raw co-occurrence,,10000,1,,,,car,automobile,,,,0.38011024101597546,,,,5003
+similarity,10,Raw co-occurrence,,10000,1,,,,king,queen,,,,0.7260096021260429,,,,5003
+similarity,10,Raw co-occurrence,,10000,1,,,,cat,dog,,,,0.744905636782699,,,,5003
+similarity,10,Raw co-occurrence,,10000,1,,,,computer,banana,,,,0.46496801158831436,,,,5003
+similarity,10,Raw co-occurrence,,10000,1,,,,doctor,hospital,,,,0.6622059420527834,,,,5003
+cooccurrence_stats,10,Raw co-occurrence,,10000,2,,,,,,,,,1801535,7.169857200002298,,"{""Window"": 2, ""Vocabulary"": 5003, ""Rows"": 5003, ""Columns"": 5003, ""Non-zero"": 1801535, ""Density (%)"": 7.197500408409761, ""Total counts"": 9852548, ""Build seconds"": 7.169857200002298, ""CSR MiB"": 20.63602066040039}",5003
+similarity,10,Raw co-occurrence,,10000,2,,,,doctor,physician,,,,0.8229460764064774,,,,5003
+similarity,10,Raw co-occurrence,,10000,2,,,,car,automobile,,,,0.5462402686857912,,,,5003
+similarity,10,Raw co-occurrence,,10000,2,,,,king,queen,,,,0.8151119581098757,,,,5003
+similarity,10,Raw co-occurrence,,10000,2,,,,cat,dog,,,,0.8264254457924772,,,,5003
+similarity,10,Raw co-occurrence,,10000,2,,,,computer,banana,,,,0.6144732095516838,,,,5003
+similarity,10,Raw co-occurrence,,10000,2,,,,doctor,hospital,,,,0.7542009093204105,,,,5003
+cooccurrence_stats,10,Raw co-occurrence,,10000,5,,,,,,,,,3535674,13.609656399814412,,"{""Window"": 5, ""Vocabulary"": 5003, ""Rows"": 5003, ""Columns"": 5003, ""Non-zero"": 3535674, ""Density (%)"": 14.125740026701548, ""Total counts"": 22384814, ""Build seconds"": 13.609656399814412, ""CSR MiB"": 40.481666564941406}",5003
+similarity,10,Raw co-occurrence,,10000,5,,,,doctor,physician,,,,0.8971563730116816,,,,5003
+similarity,10,Raw co-occurrence,,10000,5,,,,car,automobile,,,,0.7206872249181324,,,,5003
+similarity,10,Raw co-occurrence,,10000,5,,,,king,queen,,,,0.911984024216193,,,,5003
+similarity,10,Raw co-occurrence,,10000,5,,,,cat,dog,,,,0.8867657554404808,,,,5003
+similarity,10,Raw co-occurrence,,10000,5,,,,computer,banana,,,,0.7708264905391254,,,,5003
+similarity,10,Raw co-occurrence,,10000,5,,,,doctor,hospital,,,,0.8249492345907296,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,1,,,,doctor,,,child,1,0.9127122277044822,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,1,,,,doctor,,,computer,2,0.8952359922876658,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,1,,,,doctor,,,business,3,0.8814215724468334,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,1,,,,doctor,,,vehicle,4,0.8737874041716303,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,1,,,,doctor,,,dog,5,0.8592203644675831,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,2,,,,doctor,,,child,1,0.9123251805293173,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,2,,,,doctor,,,business,2,0.883982699612231,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,2,,,,doctor,,,dog,3,0.880093323758483,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,2,,,,doctor,,,vehicle,4,0.8784048111492155,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,2,,,,doctor,,,computer,5,0.870831312073149,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,5,,,,doctor,,,child,1,0.9339177807299561,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,5,,,,doctor,,,schedule,2,0.931524447704257,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,5,,,,doctor,,,plan,3,0.9268731999565906,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,5,,,,doctor,,,job,4,0.9248630705130555,,,,5003
+cooccurrence_neighbor,10,Raw co-occurrence,,10000,5,,,,doctor,,,dog,5,0.9195344254817106,,,,5003
+training,17/19/20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,,,,,48.073600499890745,44067200,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+training,17/19/20,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,,,,,,,233.5171171000693,44067200,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,physician,,,,0.7268745303153992,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,doctor,physician,,,,0.6405302882194519,,,,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,car,automobile,,,,0.3362222909927368,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,car,automobile,,,,0.6401567459106445,,,,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,king,queen,,,,0.636355459690094,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,king,queen,,,,0.611872673034668,,,,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,cat,dog,,,,0.5781256556510925,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,cat,dog,,,,0.5877196192741394,,,,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,banana,,,,0.02523011527955532,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,computer,banana,,,,0.06479059904813766,,,,55084
+similarity,17,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,hospital,,,,0.5309390425682068,,,,55084
+similarity,17,Skip-gram,Skip-gram negative sampling,10000,5,100,2,10,doctor,hospital,,,,0.5263909101486206,,,,55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,,,physician,1,0.7268745303153992,,,"your(81/25), care(9/13), health(8/5), may(8/5), medical(5/6)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,,,surgeon,2,0.6932852864265442,,,"your(81/25), eye(18/20), should(9/9), ask(6/6), lasik(6/22)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,,,dentist,3,0.665296196937561,,,"your(81/20), may(8/5), about(12/4), visit(6/4), important(3/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,,,medication,4,0.6532920598983765,,,"may(8/6), your(81/5), about(12/3), any(5/3), order(7/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,,,veterinarian,5,0.6500937938690186,,,"your(81/7), being(2/2), call(2/2), consult(8/2), visit(6/2)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,,,clinic,1,0.7291955947875977,,,"your(15/11), health(15/8), care(14/7), affiliated(5/5), local(6/5)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,,,medical,2,0.6368914842605591,,,"university(29/38), health(15/31), hospital(30/15), medical(15/24), your(15/32)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,,,emory,3,0.6317801475524902,,,"creek(3/3), hospital(30/3), johns(3/3), university(29/3), attended(1/1)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,,,nursing,4,0.6266800761222839,,,"care(14/14), your(15/11), university(29/7), medical(15/6), choose(3/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,,,johns,5,0.6189097762107849,,,"university(29/5), creek(3/3), emory(3/3), hospital(30/3), county(2/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,patient,,,diagnosis,1,0.7077509760856628,,,"treatment(6/14), your(7/6), medical(7/4), symptoms(5/4), cancer(3/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,patient,,,physician,2,0.6381580233573914,,,"care(29/13), your(7/25), medical(7/6), health(8/5), may(5/5)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,patient,,,medication,3,0.6317362189292908,,,"may(5/6), your(7/5), about(7/3), including(11/3), oral(4/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,patient,,,patients,4,0.6233740448951721,,,"care(29/19), so(13/10), when(10/10), health(8/10), information(7/7)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,patient,,,illness,5,0.6138535737991333,,,"health(8/4), out(4/4), who(6/4), my(3/6), symptoms(5/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,disease,,,chronic,1,0.8454499244689941,,,"patients(18/14), disease(18/13), such(9/9), diseases(10/7), pulmonary(6/6)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,disease,,,syndrome,2,0.8219296932220459,,,"heart(39/4), more(5/4), bowel(3/3), called(3/3), chronic(13/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,disease,,,infection,3,0.8134791254997253,,,"control(15/8), risk(18/7), chronic(13/6), during(3/3), more(5/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,disease,,,infections,4,0.8052283525466919,,,"health(9/3), new(6/3), other(8/3), so(4/3), treat(5/3)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,disease,,,severe,5,0.8025508522987366,,,"which(11/8), cause(11/7), people(7/7), including(6/5), more(5/7)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,,,device,1,0.7248139381408691,,,"your(157/59), any(19/22), use(20/17), which(12/12), used(16/10)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,,,desktop,2,0.6713361740112305,,,"your(157/18), based(12/17), computer(26/8), laptop(13/7), mobile(7/7)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,,,software,3,0.6606586575508118,,,"your(157/49), software(29/30), computer(26/29), use(20/41), any(19/31)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,,,server,4,0.6448307633399963,,,"your(157/25), which(12/13), any(19/11), if(11/15), my(45/11)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,,,browser,5,0.6417587399482727,,,"your(157/64), any(19/7), if(11/7), save(7/7), use(20/7)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,football,,,replica,1,0.7885700464248657,,,"football(274/254), shirt(245/171), united(112/41), replica(254/40), kingdom(110/36)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,football,,,baseball,2,0.5829944014549255,,,"play(9/8), national(11/7), league(13/6), player(11/6), team(13/6)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,football,,,basketball,3,0.5428248643875122,,,"college(15/14), team(13/10), play(9/11), player(11/7), game(5/6)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,football,,,shirt,4,0.5325023531913757,,,"football(274/245), replica(254/171), kingdom(110/43), shirt(245/38), kits(89/37)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,football,,,demon,5,0.5292641520500183,,,"football(274/7), replica(254/4), shirt(245/3), could(5/2), crystals(2/2)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,,,cinnamon,1,0.7272272109985352,,,"add(2/3), 1(1/2), all(1/1), bowl(1/2), chocolate(1/1)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,,,parsley,2,0.7235074639320374,,,"add(2/4), blender(1/1), into(1/1), peppers(2/1), then(2/1)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,,,onions,3,0.7176417708396912,,,"add(2/11), green(2/4), pan(2/2), peppers(2/4), 1(1/1)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,,,feeder,4,0.7079174518585205,,,"about(1/1), bowl(1/5), there(1/1), up(1/1)",55084
+nearest_neighbor,18,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,,,tikka,5,0.7063789367675781,,,Không có trong window khảo sát,55084
+training,17/19/20,CBOW,CBOW negative sampling,10000,2,100,2,10,,,,,,,43.75775599991903,44067200,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,doctor,physician,,,,0.7730036377906799,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,car,automobile,,,,0.4727974832057953,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,king,queen,,,,0.7294022440910339,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,cat,dog,,,,0.6643695831298828,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,computer,banana,,,,0.1506173461675644,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,2,100,2,10,doctor,hospital,,,,0.46999138593673706,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,physician,,,,0.7268745303153992,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,car,automobile,,,,0.3362222909927368,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,king,queen,,,,0.636355459690094,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,cat,dog,,,,0.5781256556510925,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,banana,,,,0.02523011527955532,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,hospital,,,,0.5309390425682068,,,,55084
+training,17/19/20,CBOW,CBOW negative sampling,10000,10,100,2,10,,,,,,,53.095996299991384,44067200,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,doctor,physician,,,,0.8054009079933167,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,car,automobile,,,,0.33717331290245056,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,king,queen,,,,0.6114898324012756,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,cat,dog,,,,0.5979868173599243,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,computer,banana,,,,-0.16859790682792664,,,,55084
+similarity,19,CBOW,CBOW negative sampling,10000,10,100,2,10,doctor,hospital,,,,0.5809305906295776,,,,55084
+training,17/19/20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,,,,,51.159961899975315,22033600,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,doctor,physician,,,,0.7643831372261047,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,car,automobile,,,,0.34201085567474365,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,king,queen,,,,0.7124344110488892,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,cat,dog,,,,0.6943069696426392,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,computer,banana,,,,0.06098629906773567,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,50,2,10,doctor,hospital,,,,0.5710832476615906,,,,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,queen,,queen,,1,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,rome,,opera,,0,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,50,2,10,,woman,,woman,,1,,,OK,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,physician,,,,0.7268745303153992,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,car,automobile,,,,0.3362222909927368,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,king,queen,,,,0.636355459690094,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,cat,dog,,,,0.5781256556510925,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,banana,,,,0.02523011527955532,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,hospital,,,,0.5309390425682068,,,,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,,queen,,1,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,,opera,,0,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,,woman,,1,,,OK,55084
+training,17/19/20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,,,,,74.67985980003141,132201600,vocabulary=55084; sample=0.001; shrink_windows=False; workers=1; seed=42; hash=sha256,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,medical treatment,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,football match,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,computer software,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_MRR,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_nDCG@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+demo_retrieval_P@3,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,,river bank,,,1.0,,,12 artificial docs; 4 topic queries; OOV=,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,doctor,physician,,,,0.7200546860694885,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,car,automobile,,,,0.3363341987133026,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,king,queen,,,,0.6349700093269348,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,cat,dog,,,,0.5796056985855103,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,computer,banana,,,,0.04017794504761696,,,,55084
+similarity,20,CBOW,CBOW negative sampling,10000,5,300,2,10,doctor,hospital,,,,0.5365035533905029,,,,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,queen,,queen,,1,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,rome,,opera,,0,,,OK,55084
+analogy_hit1,20,CBOW,CBOW negative sampling,10000,5,300,2,10,,woman,,woman,,1,,,OK,55084
+ranked_similarity,21,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,physician,,,1,0.7268745303153992,,,,55084
+ranked_similarity,21,CBOW,CBOW negative sampling,10000,5,100,2,10,king,queen,,,2,0.636355459690094,,,,55084
+ranked_similarity,21,CBOW,CBOW negative sampling,10000,5,100,2,10,cat,dog,,,3,0.5781256556510925,,,,55084
+ranked_similarity,21,CBOW,CBOW negative sampling,10000,5,100,2,10,car,automobile,,,4,0.3362222909927368,,,,55084
+ranked_similarity,21,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,banana,,,5,0.02523011527955532,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,king + woman - man,queen,1,0.6224867105484009,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,king + woman - man,harry,2,0.5996269583702087,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,king + woman - man,fincham,3,0.5683402419090271,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,king + woman - man,duo,4,0.5511158108711243,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,queen,king + woman - man,alice,5,0.5489466786384583,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,paris + italy - france,opera,1,0.6939231157302856,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,paris + italy - france,tuscany,2,0.6788226366043091,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,paris + italy - france,festival,3,0.6761975884437561,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,paris + italy - france,theatre,4,0.6658400297164917,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,rome,paris + italy - france,palace,5,0.664620578289032,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,man + girl - boy,woman,1,0.7227578163146973,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,man + girl - boy,person,2,0.5993301272392273,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,man + girl - boy,satan,3,0.5675909519195557,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,man + girl - boy,horse,4,0.553584098815918,,,,55084
+analogy_candidate,22,CBOW,CBOW negative sampling,10000,5,100,2,10,,woman,man + girl - boy,child,5,0.5494174957275391,,,,55084
+search,24,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,9420,1,0.8439557552337646,,,method=Word2Vec mean; coverage=0.8500; exact_query_terms=1; snippet=treatment of bleeding problems without removal of uterus tcre etc screening and treatment for cancer of uterus cervix and ovary breast lump and cancer screening mammography and treatment,55084
+search,24,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,280,2,0.7506952285766602,,,method=Word2Vec mean; coverage=1.0000; exact_query_terms=0; snippet=a phase ii pilot study to evaluate use of intravenous lidocaine for opioid refractory pain in cancer patients kerala india status of cancer pain relief and palliative care nurse moral distress and cancer pain management an ethnography of oncology nurses in india,55084
+search,24,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,3666,3,0.7463656663894653,,,method=Word2Vec mean; coverage=0.9929; exact_query_terms=1; snippet=specific focus on the use of emerging technology for the treatment of patients and fabrication of dental prosthesis this includes the use of intra oral scanners cad cam software milling units rapid prototyping 3d printing and new materials the use of this technology for implant rehabilitation is of special interest course director creator and director,55084
+search,24,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,8437,4,0.7400684952735901,,,method=Word2Vec mean; coverage=0.9892; exact_query_terms=2; snippet=dr slatore is a pulmonary critical care physician and a core investigator at the va portland health care system's center for involving veterans in care he received medical and master of epidemiology degrees from the university of washington uw he completed his residency in internal medicine and fellowship in pulmonary critical care medicine at the,55084
+search,24,CBOW,CBOW negative sampling,10000,5,100,2,10,,,medical treatment,8255,5,0.7220768928527832,,,method=Word2Vec mean; coverage=0.9365; exact_query_terms=1; snippet=on january 28 2016 food and drug administration fda has approved merck and co manufactured zepatier a new oral treatment for adult patients with chronic hepatitis c hcv virus genotype 1 and 4 infections zepatier is a once a day fixed dose oral combination product containing elbasvir hcv ns5a inhibitor and grazoprevir hcv ns3 4a,55084
+search,24,TF-IDF,,10000,,,,,,,medical treatment,9420,1,0.24518932410427047,,,method=TF-IDF; coverage=0.8500; exact_query_terms=1; snippet=treatment of bleeding problems without removal of uterus tcre etc screening and treatment for cancer of uterus cervix and ovary breast lump and cancer screening mammography and treatment,55084
+search,24,TF-IDF,,10000,,,,,,,medical treatment,8370,2,0.22377503830763243,,,method=TF-IDF; coverage=0.9942; exact_query_terms=2; snippet=what is a online medical second opinion for over 25 years patients and families have looked to we care india for medical advice and treatment now you may consult with our world renowned physicians from the comfort of your home utilizing the customized second opinion service that is right for you when should i get,55084
+search,24,TF-IDF,,10000,,,,,,,medical treatment,1826,3,0.1999103695229843,,,method=TF-IDF; coverage=0.9362; exact_query_terms=1; snippet=stefi has degrees in medical history uc berkeley and international public health ucla in 2010 she co founded the sustainable healthcare education network to integrate sustainability and health into medical and nursing education she led public health teaching at norwich medical school global public health at azim premji university in bangalore and violence prevention for,55084
+search,24,TF-IDF,,10000,,,,,,,medical treatment,3542,4,0.19006488934141913,,,method=TF-IDF; coverage=0.9153; exact_query_terms=2; snippet=hsp uncle is continuing his treatment at cmc he will be going through physiotherapy as well as he is bedridden please continue to pray you may be getting more frequent updates from mr sundarsingh jebakumar by email there is nothing significant in uncle's health today the head of the medical team hematology department explained in,55084
+search,24,TF-IDF,,10000,,,,,,,medical treatment,7526,5,0.1837616262699932,,,method=TF-IDF; coverage=0.9799; exact_query_terms=2; snippet=based on demand from our patients dr charteris performs cosmetic treatments with anti wrinkle and dermal filling injections what is a cosmetic toxin this is the most popular medical treatment for wrinkles in the upper face including what is most commonly known as frown lines and crow’s feet bunny lines from wrinkling the nose when,55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,doctor,physician,,,,0.7268745303153992,,,"{""Type"": ""Đúng theo kỳ vọng"", ""Pair"": ""doctor - physician"", ""Observed cosine"": 0.7268745303153992, ""Top-5 rank"": 1, ""Expected"": ""Hai cách gọi nghề y"", ""Token counts"": ""264/86"", ""Document counts"": ""135/54"", ""Evidence shared context"": ""your(81/25), care(9/13), health(8/5), may(8/5), medical(5/6)"", ""Possible explanation"": ""Context chung phù hợp quan hệ dự kiến. Đây là đánh giá định tính của bản nháp, không phải nhãn gold độc lập.""}",55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,clinic,,,,0.7291956543922424,,,"{""Type"": ""Đúng theo kỳ vọng"", ""Pair"": ""hospital - clinic"", ""Observed cosine"": 0.7291956543922424, ""Top-5 rank"": 1, ""Expected"": ""Hai loại cơ sở chăm sóc sức khỏe"", ""Token counts"": ""356/107"", ""Document counts"": ""179/58"", ""Evidence shared context"": ""your(15/11), health(15/8), care(14/7), affiliated(5/5), local(6/5)"", ""Possible explanation"": ""Context chung phù hợp quan hệ dự kiến. Đây là đánh giá định tính của bản nháp, không phải nhãn gold độc lập.""}",55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,computer,software,,,,0.660658597946167,,,"{""Type"": ""Đúng theo kỳ vọng"", ""Pair"": ""computer - software"", ""Observed cosine"": 0.660658597946167, ""Top-5 rank"": 3, ""Expected"": ""Liên quan lĩnh vực máy tính; không đồng nghĩa"", ""Token counts"": ""622/844"", ""Document counts"": ""331/329"", ""Evidence shared context"": ""your(157/49), software(29/30), computer(26/29), use(20/41), any(19/31)"", ""Possible explanation"": ""Context chung phù hợp quan hệ dự kiến. Đây là đánh giá định tính của bản nháp, không phải nhãn gold độc lập.""}",55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,football,replica,,,,0.7885701656341553,,,"{""Type"": ""Bất ngờ"", ""Pair"": ""football - replica"", ""Observed cosine"": 0.7885701656341553, ""Top-5 rank"": 1, ""Expected"": ""Kỳ vọng môn thể thao gần sports/baseball hơn mặt hàng"", ""Token counts"": ""573/183"", ""Document counts"": ""113/15"", ""Evidence shared context"": ""football(274/254), shirt(245/171), united(112/41), replica(254/40), kingdom(110/36)"", ""Possible explanation"": ""Domain bias/template: 254 lần replica trong window 5 của football; doc 6082 đóng góp 254 lần (100.0%). Context shirt/kits liên quan bán áo, không phải đồng nghĩa.""}",55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,banana,tikka,,,,0.7063788175582886,,,"{""Type"": ""Bất ngờ"", ""Pair"": ""banana - tikka"", ""Observed cosine"": 0.7063788175582886, ""Top-5 rank"": 5, ""Expected"": ""Kỳ vọng gần tên trái cây hơn tên món ăn"", ""Token counts"": ""42/3"", ""Document counts"": ""28/2"", ""Evidence shared context"": ""Không có trong window khảo sát"", ""Possible explanation"": ""Tikka chỉ có 3 lần trong 2 documents; dữ liệu học ít. Liên hệ miền nấu ăn/recipe hoặc vector chưa ổn định là giả thuyết, không thể kết luận nguyên nhân duy nhất từ cosine.""}",55084
+error_analysis,25,CBOW,CBOW negative sampling,10000,5,100,2,10,hospital,emory,,,,0.6317801475524902,,,"{""Type"": ""Bất ngờ"", ""Pair"": ""hospital - emory"", ""Observed cosine"": 0.6317801475524902, ""Top-5 rank"": 3, ""Expected"": ""Kỳ vọng loại cơ sở, nhưng gặp tên riêng"", ""Token counts"": ""356/8"", ""Document counts"": ""179/5"", ""Evidence shared context"": ""creek(3/3), hospital(30/3), johns(3/3), university(29/3), attended(1/1)"", ""Possible explanation"": ""Emory là tên riêng, chỉ có 8 lần trong 5 documents. Context university/hospital có thể tạo liên hệ tổ chức; bất ngờ về loại quan hệ, không nhất thiết sai.""}",55084
