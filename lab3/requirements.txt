@@ -1,8 +1,0 @@
-numpy==2.5.3
-scipy==1.18.1
-pandas==3.0.6
-matplotlib==3.11.2
-gensim==4.4.0
-nbformat==5.11.1
-nbclient==0.11.0
-ipykernel==7.4.0
