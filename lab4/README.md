@@ -42,10 +42,10 @@ Không đọc phần unsupervised hay fit embeddings/IDF trên validation/test.
 - classification.ipynb: notebook thực nghiệm, output bảng và plot inline.
 - preprocessing.py: normalize, tokenizer, loader, dedup và reproducible split.
 - classification.py: fit/evaluate TF-IDF/LR/SVM, Word2Vec và contributions.
-- results.csv: metrics của các cấu hình trên validation/test và dummy baseline.
-- confusion_matrix.png: hình bắt buộc theo đề.
-- Error_analysis.pdf và error_examples.csv: ví dụ đúng/sai cùng số liệu.
-- model_weights.csv, threshold_results.csv, test_predictions.csv, run_summary.json: dữ liệu để truy vết.
+- results.csv: toàn bộ metrics, error examples, threshold, model weights và test predictions; phân biệt bằng record_type.
+- data/confusion_matrix.png: hình bắt buộc theo đề.
+- Error_analysis.pdf: phần phân tích lỗi viết tay.
+- run_summary.json: seed, model được chọn và tổng số records.
 - Calculations.pdf, Prediction.pdf, Reflection.pdf: bài làm PDF thay thế các Markdown cũ.
 - run_notebook.py, requirements.txt: chạy lại.
 
@@ -57,7 +57,7 @@ Không đọc phần unsupervised hay fit embeddings/IDF trên validation/test.
     ./.venv/Scripts/python.exe run_notebook.py
 
 Có thể mở notebook bằng VS Code/Jupyter và chọn .venv.
-Tất cả output được lưu trong lab4. Plot nhúng vào notebook; chỉ confusion_matrix.png lưu riêng.
+Tất cả output được lưu trong lab4. Plot nhúng vào notebook; chỉ data/confusion_matrix.png lưu riêng.
 Không lưu file model; chạy lại notebook sẽ train lại và cập nhật metrics.
 
 ## Cấu hình và quy trình đánh giá
@@ -115,3 +115,19 @@ Model chọn từ validation: TF-IDF uni+bigram uncapped + LR; TN=865, FP=135, F
 ## 12. Vì sao fit TF-IDF trước split là data leakage?
 
 Vocabulary biết từ của test và IDF sử dụng số tài liệu/tần suất xuất hiện ở cả train lẫn test. Thông tin test vì vậy ảnh hưởng features dùng để train dù không dùng nhãn test. Test không còn độc lập; kết quả đánh giá có thể thiên lệch. Cần split trước, fit chỉ trên train, rồi transform validation/test.
+
+## Đọc results.csv
+
+Chỉ xuất một file CSV tổng hợp, gồm 2052 records:
+
+| record_type | Nội dung | Số dòng |
+|---|---|---:|
+| evaluation | Metrics validation/test và dummy baseline | 18 |
+| error_analysis | Sáu ví dụ đúng/sai | 6 |
+| threshold | Precision/recall/F1 theo threshold | 4 |
+| model_weight | Top positive/negative feature weights | 24 |
+| test_prediction | 2.000 review, nhãn thật và dự đoán của tám model | 2000 |
+
+Các nhóm giữ nguyên cột và giá trị dữ liệu gốc; cột không áp dụng cho nhóm nào sẽ để trống.
+Đọc bảng metrics: pandas.read_csv("results.csv").query("record_type == 'evaluation'").
+Notebook chạy lại chỉ ghi results.csv, không tạo các CSV phụ.

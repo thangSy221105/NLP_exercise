@@ -6,7 +6,7 @@
   "validation_samples": 2000,
   "test_samples": 2000,
   "model_count": 8,
-  "results_rows": 18,
+  "results_rows": 2052,
   "selected_validation": {
     "accuracy": 0.8795,
     "precision": 0.8597156398104265,
@@ -28,5 +28,13 @@
     "fp": 135,
     "fn": 114,
     "tp": 886
+  },
+  "metric_rows": 18,
+  "record_counts": {
+    "evaluation": 18,
+    "error_analysis": 6,
+    "threshold": 4,
+    "model_weight": 24,
+    "test_prediction": 2000
   }
 }
