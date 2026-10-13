@@ -1,0 +1,7 @@
+﻿Seed,Case,ID,True,Predicted,Correct,P(positive),Tokens,OOV fraction,Category
+2026,1,aclImdb/test/neg/3254_1.txt,negative,negative,True,0.07773174714688323,23,0.0,Phù hợp nhãn
+2026,2,aclImdb/test/pos/9148_9.txt,positive,positive,True,0.8184482815723831,13,0.15384615384615385,Phù hợp nhãn
+2026,3,aclImdb/test/neg/3846_1.txt,negative,negative,True,0.02023592896483967,25,0.0,Phù hợp nhãn
+2026,4,aclImdb/test/neg/7086_4.txt,negative,positive,False,0.7084696283376642,43,0.18604651162790697,Lexical ambiguity / short text — giả thuyết
+2026,5,aclImdb/test/pos/12385_10.txt,positive,negative,False,0.33800808667469745,37,0.05405405405405406,Lexical ambiguity / short text — giả thuyết
+2026,6,aclImdb/test/pos/3287_10.txt,positive,negative,False,0.3772142769988779,47,0.02127659574468085,Negation cần kiểm tra

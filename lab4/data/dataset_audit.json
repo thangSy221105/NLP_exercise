@@ -1,0 +1,26 @@
+{
+  "source_url": "https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz",
+  "seed": 2026,
+  "source_labeled_samples": 50000,
+  "source_classes": 2,
+  "source_missing_text": 0,
+  "source_missing_labels": 0,
+  "source_exact_duplicate_excess": 418,
+  "source_normalized_duplicate_excess": 422,
+  "source_conflicting_hash_groups": 0,
+  "eligible_after_cleaning": 49578,
+  "selected_samples": 10000,
+  "archive_sha256": "c40f74a18d3b61f90feba1e17730e0d38e8b97c05fde7008942e91923d1658fe",
+  "split_policy": "6000 train + 2000 validation from official train; 2000 official test",
+  "duplicate_policy": "exclude conflicting normalized hashes, keep one per hash before sampling",
+  "selected_normalized_duplicate_excess": 0,
+  "counts": {
+    "test/0": 1000,
+    "test/1": 1000,
+    "train/0": 3000,
+    "train/1": 3000,
+    "validation/0": 1000,
+    "validation/1": 1000
+  },
+  "subset_sha256": "5a189f95c9a18b123a716c011a35695d5cf42cf0602e26bc3d86db238f9ff892"
+}
