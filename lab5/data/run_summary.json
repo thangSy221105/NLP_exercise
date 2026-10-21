@@ -1,0 +1,40 @@
+{
+  "seed": 2026,
+  "selected_model": "GRU L=100",
+  "selection": "validation macro-F1 among LSTM/GRU",
+  "checkpoint_selection": "minimum validation loss",
+  "data_sha256": "5a189f95c9a18b123a716c011a35695d5cf42cf0602e26bc3d86db238f9ff892",
+  "vocabulary_size": 10000,
+  "train_samples": 6000,
+  "validation_samples": 2000,
+  "test_samples": 2000,
+  "recurrent_configurations": 5,
+  "epochs": 8,
+  "selected_test": {
+    "accuracy": 0.7025,
+    "precision": 0.7031093279839519,
+    "recall": 0.701,
+    "f1": 0.7020530796194292,
+    "macro_f1": 0.7024993306234939,
+    "tn": 704,
+    "fp": 296,
+    "fn": 299,
+    "tp": 701
+  },
+  "record_counts": {
+    "test_prediction": 12000,
+    "learning_curve": 40,
+    "position_probe": 24,
+    "order_negation_probe": 16,
+    "retention": 12,
+    "evaluation": 12,
+    "dataset_distribution": 6,
+    "toy_information_flow": 6,
+    "late_cue_probe": 6,
+    "error_analysis": 6,
+    "application": 4,
+    "sequence_length_summary": 3,
+    "rnn_cell_check": 2,
+    "lab4_reference": 2
+  }
+}
