@@ -1,0 +1,6 @@
+type,text,p_positive,prediction
+short,I really enjoyed this movie.,0.13952350616455078,0
+negation,I do not like this movie.,0.009808932431042194,0
+contrast,"I thought this movie would be bad, but it was actually excellent.",0.00710304407402873,0
+ambiguous,"The movie was not terrible, but it was not especially good either.",0.033684030175209045,0
+long,"The film begins slowly, develops its characters carefully, and ends with a moving performance that I enjoyed.",0.9323039650917053,1
