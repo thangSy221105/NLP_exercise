@@ -1,0 +1,2 @@
+﻿sample_sentences,precision,recall,f1,gold_entities,predicted_entities,true_positive,false_positive,false_negative
+30,0.4482758620689655,0.49056603773584906,0.46846846846846846,53,58,26,32,27

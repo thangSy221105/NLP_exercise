@@ -1,0 +1,5 @@
+data/huggingface/
+result/model/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

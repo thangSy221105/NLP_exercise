@@ -1,0 +1,16 @@
+﻿sentence_id,text,gold_entity,predicted_entity,gold_type,predicted_type,error_type,explanation
+0,"SOCCER - JAPAN GET LUCKY WIN , CHINA IN SURPRISE DEFEAT .",JAPAN; CHINA,CHINA,LOC;PER,LOC,False positive / spurious entity,"Model dự đoán entity không khớp span và type gold; kiểm tra lexical cue, context và domain."
+1,Nadim Ladki,Nadim Ladki,Nadim,PER,PER,False positive / spurious entity,"Model dự đoán entity không khớp span và type gold; kiểm tra lexical cue, context và domain."
+1,Nadim Ladki,Nadim Ladki,Ladki,PER,PER,False positive / spurious entity,"Model dự đoán entity không khớp span và type gold; kiểm tra lexical cue, context và domain."
+2,"AL-AIN , United Arab Emirates 1996-12-06",AL-AIN; United Arab Emirates,AL-AIN,LOC;LOC,PER,False positive / spurious entity,"Model dự đoán entity không khớp span và type gold; kiểm tra lexical cue, context và domain."
+2,"AL-AIN , United Arab Emirates 1996-12-06",AL-AIN; United Arab Emirates,United,LOC;LOC,LOC,False positive / spurious entity,"Model dự đoán entity không khớp span và type gold; kiểm tra lexical cue, context và domain."
+0,"SOCCER - JAPAN GET LUCKY WIN , CHINA IN SURPRISE DEFEAT .",CHINA,JAPAN; CHINA,PER,LOC;LOC,False negative / missing or wrong entity,Entity gold bị bỏ sót hoặc dự đoán sai span/type; kiểm tra từ hiếm và ngữ cảnh.
+1,Nadim Ladki,Nadim Ladki,Nadim; Ladki,PER,PER;PER,False negative / missing or wrong entity,Entity gold bị bỏ sót hoặc dự đoán sai span/type; kiểm tra từ hiếm và ngữ cảnh.
+2,"AL-AIN , United Arab Emirates 1996-12-06",AL-AIN,AL-AIN; United; Arab; Emirates,LOC,PER;LOC;LOC;LOC,False negative / missing or wrong entity,Entity gold bị bỏ sót hoặc dự đoán sai span/type; kiểm tra từ hiếm và ngữ cảnh.
+2,"AL-AIN , United Arab Emirates 1996-12-06",United Arab Emirates,AL-AIN; United; Arab; Emirates,LOC,PER;LOC;LOC;LOC,False negative / missing or wrong entity,Entity gold bị bỏ sót hoặc dự đoán sai span/type; kiểm tra từ hiếm và ngữ cảnh.
+3,Japan began the defence of their Asian Cup title with a lucky 2-1 win against Syria in a Group C championship match on Friday .,Asian Cup,Japan; Asian; Cup; Syria,MISC,LOC;MISC;MISC;LOC,False negative / missing or wrong entity,Entity gold bị bỏ sót hoặc dự đoán sai span/type; kiểm tra từ hiếm và ngữ cảnh.
+1,Nadim Ladki,Nadim Ladki,Nadim,PER,PER,Boundary error,Gold và predicted span chồng lấn nhưng ranh giới khác; kiểm tra token đầu/cuối và context.
+1,Nadim Ladki,Nadim Ladki,Ladki,PER,PER,Boundary error,Gold và predicted span chồng lấn nhưng ranh giới khác; kiểm tra token đầu/cuối và context.
+2,"AL-AIN , United Arab Emirates 1996-12-06",United Arab Emirates,United,LOC,LOC,Boundary error,Gold và predicted span chồng lấn nhưng ranh giới khác; kiểm tra token đầu/cuối và context.
+2,"AL-AIN , United Arab Emirates 1996-12-06",United Arab Emirates,Arab,LOC,LOC,Boundary error,Gold và predicted span chồng lấn nhưng ranh giới khác; kiểm tra token đầu/cuối và context.
+2,"AL-AIN , United Arab Emirates 1996-12-06",United Arab Emirates,Emirates,LOC,LOC,Boundary error,Gold và predicted span chồng lấn nhưng ranh giới khác; kiểm tra token đầu/cuối và context.

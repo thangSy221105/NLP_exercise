@@ -1,0 +1,19 @@
+{
+  "seed": 2026,
+  "dataset": "CoNLL-2003",
+  "dataset_source": "BramVanroy/conll2003 Parquet mirror",
+  "splits": {
+    "train": 14041,
+    "validation": 3250,
+    "test": 3453
+  },
+  "model": "prajjwal1/bert-tiny",
+  "tokenizer": "prajjwal1/bert-tiny",
+  "alignment_strategy": "label first subword; -100 for special and continuation subwords",
+  "max_length": 128,
+  "batch_size": 32,
+  "epochs": 2,
+  "optimizer": "AdamW",
+  "learning_rate": 3e-05,
+  "hardware": "CPU"
+}
