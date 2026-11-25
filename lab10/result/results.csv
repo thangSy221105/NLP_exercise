@@ -1,0 +1,3 @@
+model,test_examples,em,f1,training_seconds
+Keyword baseline,500,0.038,0.14342681207681207,0.0
+BERT-Tiny fine-tuned,500,0.05,0.12754136331014684,292.28013253211975

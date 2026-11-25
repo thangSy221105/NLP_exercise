@@ -1,0 +1,16 @@
+{
+  "dataset": "SQuAD v1.1",
+  "seed": 2026,
+  "model": "prajjwal1/bert-tiny",
+  "train_examples": 3000,
+  "validation_examples": 300,
+  "test_examples": 500,
+  "max_length": 384,
+  "stride": 128,
+  "batch_size": 16,
+  "learning_rate": 3e-05,
+  "epochs": 3,
+  "optimizer": "AdamW",
+  "device": "CPU",
+  "training_seconds": 292.28013253211975
+}
